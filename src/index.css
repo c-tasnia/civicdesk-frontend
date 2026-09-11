@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f8fafc;
+  --color-paper-raised: #ffffff;
+  --color-ink: #0f172a;
+  --color-ink-soft: #475569;
+  --color-slate: #94a3b8;
+  --color-rule: #e2e8f0;
+  --color-teal: #4f46e5;
+  --color-teal-deep: #4338ca;
+  --color-amber: #06b6d4;
+  --color-amber-soft: #cffafe;
+  --color-alert: #e11d48;
+  --color-alert-soft: #ffe4e6;
+  --color-success: #10b981;
+
+  --font-display: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: var(--color-amber-soft);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+.gradient-brand {
+  background-image: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+}
+
+.gradient-text {
+  background-image: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-glow {
+  background: radial-gradient(circle at 30% 20%, rgba(79, 70, 229, 0.15), transparent 60%),
+    radial-gradient(circle at 80% 60%, rgba(6, 182, 212, 0.12), transparent 55%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
